@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+set -euxo pipefail
+
+pushd py/libs
+poetry install
+poetry run mypy .
+poetry run flake8 ./libs ./tests
+poetry run isort --profile black --check .
+poetry run pytest
+popd
+
+pushd py/api
+poetry install
+poetry run mypy .
+poetry run flake8 ./api
+poetry run isort --profile black --check .
+popd

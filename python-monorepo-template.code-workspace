@@ -1,0 +1,18 @@
+{
+  "folders": [
+    {
+      "path": "."
+    },
+    {
+      "path": "py/libs"
+    },
+    {
+      "path": "py/api"
+    }
+  ],
+  "settings": {
+    "files.exclude": {
+      "py/*": true
+    }
+  }
+}
